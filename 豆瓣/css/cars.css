@@ -135,16 +135,50 @@
 	line-height: 0.45rem;
 	display: flex;
 	width: 100%;
+	background: #fff;
 }
 .cars-footer>div {
 	flex:3;
+}
+.select-show {
+	background: #fff;
+	flex:1;
+	text-align: right;
+	margin-right: 0.1rem;
+}
+.select-show>b {
+    color: #fff;
+    font-size: 0.16rem;
+	line-height: 0.1rem;
+    display: block;
+    margin: 0.1rem 0;
+}
+.select-show>p {
+    display: block;
+	font-size: 0.1rem;
+	color: #fff;
+	line-height: 0.1rem;
 }
 .cars-footer>a {
 	flex:1;
 	text-align: center;
 	font-size: 0.15rem;
+    background-color: #fff;
+    color: #fff;
+}
+.new-select>b {
+    color: #f05f50;
+}
+.new-select>p {
+	color: #9a9a9a;
+}
+.cars-footer>a {
     background-color: #9a9a9a;
     color: #fff;
+}
+.cars-footer .car-newtrue {
+	background: #f05f50;
+	color: #fff;
 }
 .haha {
 	padding: 0 0;

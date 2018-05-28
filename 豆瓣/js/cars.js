@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	//加的效果
 	$(".add").click(function(){
 		var n=$(this).siblings(".text_box").val();
@@ -15,14 +16,23 @@ $(document).ready(function(){
 		$(this).siblings(".text_box").val(num);
 	});
 	$(".cars-list>label").click(function() {
+		//只使用单个
         var val= $(this).attr("class");
-        // console.log(val)
         if(val == 'labelId'){
             $(this).addClass("label-select").removeClass("labelId");
+			var prices = $(this).parent().siblings().children("").children("span").text();
+			console.log(prices)
+			//改：结算只适用一个
+			$(".select-show").children("b").text(prices)
+			$(".select-show").addClass("new-select");
+			$(".car-true").addClass("car-newtrue");
             return false;
         }{
         	$(this).addClass("labelId").removeClass("label-select")
             $(".all-select>label").addClass("labelId").removeClass("label-select");
+            //改：结算只适用一个
+            $(".select-show").children("b").text("￥0.00");
+            $(".car-true").removeClass("car-newtrue");
         	return false;
         }
 	})
