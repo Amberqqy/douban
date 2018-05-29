@@ -9,6 +9,15 @@ $(document).ready(function(){
 		$(".ppiao").addClass("coupon-new");
 		$(".ppiao").slideDown();
 	})
+	$(".click-piao").click(function(){
+		$(".box-foot").hide();
+		$(".labao").addClass("coupon-new");
+		$(".labao").slideDown();
+	})
+	$(".piao-none").click(function(){
+		$(".labao").slideUp();
+		$(".box-foot").show();
+	})
 	$(".coupon-none").click(function(){
 		$(".ppiao").slideUp();
 		$(".box-foot").show();
