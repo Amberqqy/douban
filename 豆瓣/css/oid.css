@@ -1,4 +1,4 @@
-body,html,div,p,a,b,span,img,input,button {
+body,html,div,p,a,b,span,img,input,button,dl,dd,dt {
 	padding: 0;
 	margin: 0;
 }
@@ -281,6 +281,7 @@ a {
 	width: 100%;
 	height: 100%;
 	bottom:0;
+	overflow: scroll;
 }
 .coupon-box {
 	display: none;
@@ -456,4 +457,33 @@ a {
 }
 .hide {
 	display: none;
+}
+.give-box {
+	margin: 0.2rem 0;
+	font-size: 0;
+	padding: 0 0.15rem;
+}
+.give-box>a {
+	display: block;
+	height: 0.4rem;
+	line-height: 0.4rem;
+    text-align: center;
+    color: #fff;
+    font-size: 0.14rem;
+    background: #0aa082;
+}
+.dl-footer {
+	padding: 0.15rem 0.15rem 0.05rem 0.15rem;
+	font-size: 0;
+}
+.dl-footer>dl>dt {
+	font-size: 0.12rem;
+	margin-bottom: 0.15rem;
+	font-size: 530;
+	color: #5c5c5c;
+}
+.dl-footer>dl>dd {
+	font-size: 0.12rem;
+	color: #5c5c5c;
+	margin-bottom: 0.04rem;
 }

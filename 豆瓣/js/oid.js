@@ -20,7 +20,7 @@ $(document).ready(function(){
 	})
 	$(".coupon-none").click(function(){
 		$(".ppiao").slideUp();
-		$(".box-foot").show();
+		$(".box-foot").hide();
 	})
 	$(".ways-list").click(function(){
 		$(this).addClass("one-way").siblings().removeClass("one-way")
