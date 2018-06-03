@@ -25,4 +25,13 @@ $(document).ready(function(){
 	$(".ways-list").click(function(){
 		$(this).addClass("one-way").siblings().removeClass("one-way")
 	})
+	$(".id-address").click(function(){
+		$(".box-foot").hide();
+		$(".new-ha").addClass("new-hanew");
+		$(".new-ha").slideDown();
+	})
+	$(".address").click(function(){
+		$(".box-foot").show();
+		$(".new-ha").slideUp();
+	})
 })

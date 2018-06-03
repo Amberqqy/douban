@@ -1,5 +1,18 @@
 $(document).ready(function(){
+    function haha (){
+     	// var have = $(".labelId");
+     	// var havelength = have.length;
+     	// var but = $(".label-select");
+     	// var butlength = but.length;
+     	// console.log(havelength)
+     	// console.log(butlength)
+     	// if(butlength !== 0){
+      //       $(".car-true").addClass("car-newtrue");
+     	// }else {
 
+     	// }
+    }
+    haha();
 	//加的效果
 	$(".add").click(function(){
 		var n=$(this).siblings(".text_box").val();
@@ -21,20 +34,35 @@ $(document).ready(function(){
         if(val == 'labelId'){
             $(this).addClass("label-select").removeClass("labelId");
 			var prices = $(this).parent().siblings().children("").children("span").text();
-			console.log(prices)
 			//改：结算只适用一个
 			// $(".select-show").children("b").text(prices)
 			$(".select-show").addClass("new-select");
-			$(".car-true").addClass("car-newtrue");
-            return false;
+			var but = $(".label-select");
+     	    var butlength = but.length;
+     	    console.log(butlength)
+        	if(butlength !== 0){
+	            $(".car-true").addClass("car-newtrue");
+	     	}else {
+                $(".car-true").removeClass("car-newtrue");
+	     	}
+            return val;
         }{
-        	$(this).addClass("labelId").removeClass("label-select")
+        	$(this).addClass("labelId").removeClass("label-select");
             $(".all-select>label").addClass("labelId").removeClass("label-select");
+            var but = $(".label-select");
+     	    var butlength = but.length;
+     	    console.log(butlength)
+            if(butlength !== 0){
+	            $(".car-true").addClass("car-newtrue");
+	     	}else {
+                $(".car-true").removeClass("car-newtrue");
+	     	}
             //改：结算只适用一个
             // $(".select-show").children("b").text("￥0.00");
-            $(".car-true").removeClass("car-newtrue");
-        	return false;
+            // 
+        	return val;
         }
+        
 	})
 	$(".all-select>label").click(function(){
 		var val= $(".cars-list>label").attr("class");
@@ -43,10 +71,26 @@ $(document).ready(function(){
         if(valthis == 'labelId'){
             $(".all-select>label").addClass("label-select").removeClass("labelId");
             $(".cars-list>label").addClass("label-select").removeClass("labelId");
+            var but = $(".label-select");
+     	    var butlength = but.length;
+     	    console.log(butlength)
+            if(butlength !== 0){
+	            $(".car-true").addClass("car-newtrue");
+	     	}else {
+                $(".car-true").removeClass("car-newtrue");
+	     	}
             return false;
         }{
         	$(".all-select>label").addClass("labelId").removeClass("label-select")
         	$(".cars-list>label").addClass("labelId").removeClass("label-select")
+        	var but = $(".label-select");
+     	    var butlength = but.length;
+     	    console.log(butlength)
+            if(butlength !== 0){
+	            $(".car-true").addClass("car-newtrue");
+	     	}else {
+                $(".car-true").removeClass("car-newtrue");
+	     	}
         	return false;
         }
 	})
