@@ -28,14 +28,23 @@ $(document).ready(function(){
 		if(num==0){ return}
 		$(this).siblings(".text_box").val(num);
 	});
+	boxbox = [];
+	newbox = [];
 	$(".cars-list>label").click(function() {
 		//只使用单个
         var val= $(this).attr("class");
         if(val == 'labelId'){
             $(this).addClass("label-select").removeClass("labelId");
 			var prices = $(this).parent().siblings().children("").children("span").text();
+            boxbox.push(prices)
+            // console.log(boxbox)
+            boxbox.forEach(function(i){
+                console.log(i)
+                // var numbox = i.split()
+                // console.log(numbox)
+			    $(".select-show").children("b").text(prices)
+            })
 			//改：结算只适用一个
-			// $(".select-show").children("b").text(prices)
 			$(".select-show").addClass("new-select");
 			var but = $(".label-select");
      	    var butlength = but.length;
@@ -62,7 +71,6 @@ $(document).ready(function(){
             // 
         	return val;
         }
-        
 	})
 	$(".all-select>label").click(function(){
 		var val= $(".cars-list>label").attr("class");

@@ -34,4 +34,10 @@ $(document).ready(function(){
 		$(".box-foot").show();
 		$(".new-ha").slideUp();
 	})
+	$(".address-add").click(function(){
+		$(".click-box").slideDown();
+	})
+	$(".add-head>a").click(function(){
+		$(".click-box").hide();
+	})
 })
